@@ -1,6 +1,8 @@
 const http = require("http");
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const app = require("@apollo/server");
+const resolvers = require("./graphql");
+const { ApolloServer } = require("apollo-server");
 
 require("dotenv").config();
 const hostname = process.env.HOSTNAME || "0.0.0.0";
@@ -37,6 +39,8 @@ const server = http.createServer((req, res) => {
   res.setHeader("Content-Type", "text/plain");
   res.end("Hello World");
 });
+
+// const server2 =
 
 server.listen(port, hostname, () => {
   console.log(`Server running at https://${hostname}:${port}/`);
