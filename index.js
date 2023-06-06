@@ -6,8 +6,9 @@ const typeDefs = require("./graphql/typeDefs");
 const mongoose = require("mongoose");
 
 require("dotenv").config();
-const hostname = process.env.HOSTNAME || "0.0.0.0";
 const uri = process.env.MONGO_URI;
+const url = process.env.URL || "0.0.0.0";
+const port = process.env.PORT || 3000;
 
 const startServer = async () => {
   const app = express();
@@ -36,7 +37,7 @@ const startServer = async () => {
     path: "/api",
   });
 
-  httpServer.listen({ port: process.env.PORT || 3000 }, () =>
+  httpServer.listen({ port }, () =>
     console.log(
       `Server listening on localhost:${port}${apolloServer.graphqlPath}`
     )
