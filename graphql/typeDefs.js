@@ -8,8 +8,16 @@ const typeDefs = gql`
     buttonText: String
     to: String
   }
+  type advertisement {
+    type: String!
+    text: String!
+    buttonText: String!
+    linkTo: String!
+    img: String!
+  }
   type Query {
     sliders: [slider!]!
+    advertisements: [advertisement!]!
   }
 `;
 
