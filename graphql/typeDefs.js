@@ -15,9 +15,16 @@ const typeDefs = gql`
     linkTo: String!
     img: String!
   }
+  type product {
+    title: String!
+    img: String!
+    price: Float!
+    oldPrice: Float
+  }
   type Query {
     sliders: [slider!]!
     advertisements: [advertisement!]!
+    products: [product!]!
   }
 `;
 

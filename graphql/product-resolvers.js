@@ -1,10 +1,10 @@
-const Slider = require("../models/sliders.js");
+const Product = require("../models/products");
 
 const resolvers = {
-  sliderQuery: {
-    sliders: async () => {
+  productQuery: {
+    products: async () => {
       try {
-        return await Slider.find({});
+        return await Product.find({});
       } catch (e) {
         console.log(e);
         throw e;
