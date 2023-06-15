@@ -20,11 +20,13 @@ const typeDefs = gql`
     img: String!
     price: Float!
     oldPrice: Float
+    featured: Boolean
   }
   type Query {
     sliders: [slider!]!
     advertisements: [advertisement!]!
     products: [product!]!
+    featuredProducts: [product!]!
   }
 `;
 
