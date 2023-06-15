@@ -2,18 +2,19 @@ const Product = require("../models/products");
 
 const resolvers = {
   productQuery: {
-    products: async () => {
+    products: async (_, { from }) => {
       try {
-        return await Product.find({ featured: true });
+        console.log("from", from);
+
+        return await Product.find();
       } catch (e) {
         console.log(e);
         throw e;
         aa;
       }
     },
-    featuredProducts: async (from) => {
+    featuredProducts: async () => {
       try {
-        console.log("from", from);
         return await Product.find({ featured: true });
       } catch (e) {
         console.log(e);
