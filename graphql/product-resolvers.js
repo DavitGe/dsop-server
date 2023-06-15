@@ -8,10 +8,12 @@ const resolvers = {
       } catch (e) {
         console.log(e);
         throw e;
+        aa;
       }
     },
-    featuredProducts: async () => {
+    featuredProducts: async (from) => {
       try {
+        console.log("from", from);
         return await Product.find({ featured: true });
       } catch (e) {
         console.log(e);
