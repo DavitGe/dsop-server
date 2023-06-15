@@ -5,6 +5,7 @@ const productSchema = new mongoose.Schema({
   price: Number,
   oldPrice: Number,
   img: String,
+  featured: Boolean,
 });
 
 productSchema.set("toJSON", {

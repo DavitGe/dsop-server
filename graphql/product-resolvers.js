@@ -11,6 +11,14 @@ const resolvers = {
       }
     },
   },
+  featuredProducts: async () => {
+    try {
+      return await Product.find({ featured: true });
+    } catch (e) {
+      console.log(e);
+      throw e;
+    }
+  },
 };
 
 module.exports = resolvers;
