@@ -25,9 +25,8 @@ const typeDefs = gql`
   type Query {
     sliders: [slider!]!
     advertisements: [advertisement!]!
-    products(from: Int): [product!]!
     featuredProducts: [product!]!
-    productsScroll(offset: Int, limit: Int): [product!]!
+    products(offset: Int, limit: Int): [product!]!
   }
 `;
 
