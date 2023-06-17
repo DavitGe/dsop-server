@@ -27,6 +27,7 @@ const typeDefs = gql`
     advertisements: [advertisement!]!
     products(from: Int): [product!]!
     featuredProducts: [product!]!
+    productsScroll(offset: Int, limit: Int): [product!]!
   }
 `;
 
