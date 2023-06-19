@@ -16,6 +16,7 @@ const typeDefs = gql`
     img: String!
   }
   type product {
+    id: String!
     title: String!
     img: String!
     price: Float!
