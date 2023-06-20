@@ -28,6 +28,7 @@ const typeDefs = gql`
     advertisements: [advertisement!]!
     featuredProducts: [product!]!
     products(offset: Int, limit: Int): [product!]!
+    getProductById(id: String): [product!]!
   }
 `;
 
